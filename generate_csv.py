@@ -71,7 +71,7 @@ def Main():
     df['assigned_group'] = df['group_id'].apply(lambda x: fd_groups.get(x,
                                                           'Unassigned'))
 
-    cols = ["id", "subject", "status_name", "assigned_group", "created_at"]
+    cols = ["id", "subject", "status_name", "assigned_group", "created_at", "updated_at"]
     terse_df = df[cols]
     terse_df.to_csv('tickets.csv')
 
